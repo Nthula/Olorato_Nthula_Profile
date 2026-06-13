@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olorato Nthula | Business &amp; Data Analyst</title>
+  <meta name="description" content="Portfolio of Olorato Nthula — Information Systems graduate specialising in business analysis, data analytics and technology solutions.">
+
+  <!-- Fonts: Fraunces for headings (report-style serif), Inter for body, IBM Plex Mono for data labels -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- subtle cursor glow element -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-mark">ON</span>
+        <span class="brand-name">Olorato Nthula</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-link active" data-nav>Home</a>
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#education" class="nav-link" data-nav>Education</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HOME / HERO ============ -->
+  <section class="hero" id="home">
+    <!-- decorative dashboard grid + line chart, purely visual -->
+    <div class="hero-grid" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- faint axis grid -->
+        <g class="grid-lines" stroke="#2E4258" stroke-width="1">
+          <line x1="0" y1="100" x2="1200" y2="100"/>
+          <line x1="0" y1="220" x2="1200" y2="220"/>
+          <line x1="0" y1="340" x2="1200" y2="340"/>
+          <line x1="0" y1="460" x2="1200" y2="460"/>
+          <line x1="0" y1="580" x2="1200" y2="580"/>
+          <line x1="0" y1="700" x2="1200" y2="700"/>
+        </g>
+        <!-- the "trend line" representing growth/insight -->
+        <polyline class="trend-line" points="0,620 140,560 280,600 420,460 560,500 700,340 840,380 980,210 1120,250 1260,120"
+          fill="none" stroke="#C8A45C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- data points along the line -->
+        <g class="trend-points" fill="#C8A45C">
+          <circle cx="280" cy="600" r="5"/>
+          <circle cx="560" cy="500" r="5"/>
+          <circle cx="840" cy="380" r="5"/>
+          <circle cx="1120" cy="250" r="5"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Fig. 01 — Profile</p>
+        <h1 class="hero-title">
+          Transforming Data
+          <span class="hero-title-line">Into Business Decisions.</span>
+        </h1>
+
+        <div class="hero-role">
+          <span class="hero-role-prefix">I work as a</span>
+          <span class="typed-role" id="typedRole" aria-live="polite"></span>
+          <span class="cursor-blink" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-lede">
+          A recent Information Systems graduate from the University of Botswana, I sit at the
+          intersection of business strategy and technical execution — turning operational
+          questions into clear analysis, clean data, and practical recommendations.
+        </p>
+
+        <div class="hero-actions">
+          <a href="Olorato_Nthula_National_Musem__CV__1_.pdf" class="btn btn-primary" download>
+            <span>Download CV</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 1V11M8 11L4 7M8 11L12 7M2 14H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- stat cards -->
+      <div class="hero-stats" id="heroStats">
+        <div class="stat-card">
+          <span class="stat-number" data-count="12">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="9">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Technologies &amp; Tools</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-suffix"></span>
+          <p class="stat-label">Certifications</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span class="scroll-cue-line"></span>
+      <span class="scroll-cue-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="eyebrow">Fig. 02 — Background</p>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm Olorato Nthula, an Information Systems graduate (Major: Computer Information Systems)
+            from the University of Botswana, Class of 2025. My path into technology started with a
+            simple curiosity: how do organisations actually use information to make better decisions?
+            That question has shaped everything since — from the modules I chose, to the way I approach
+            every project.
+          </p>
+          <p>
+            During my industrial attachment at the <strong>Bank of Botswana</strong>, I worked alongside
+            the IT support team — setting up equipment, resolving day-to-day technical issues for staff,
+            supporting event and presentation systems, and helping keep records and systems running
+            smoothly. It gave me a grounded, practical understanding of how technology supports a real
+            business environment, not just a classroom one.
+          </p>
+          <p>
+            What I enjoy most is the analytical side of the work: gathering requirements, mapping out
+            processes, working with data in Excel, SQL and Power BI, and translating findings into
+            something a decision-maker can actually act on. I see myself as a bridge — someone who can
+            sit in a meeting with business stakeholders and just as comfortably sit with a dataset or a
+            database schema.
+          </p>
+
+          <div class="mission-card">
+            <p class="mission-label">Mission</p>
+            <p class="mission-text">
+              To help organisations make sense of their data and systems — and to keep learning,
+              one project at a time, as technology and business needs evolve together.
+            </p>
+          </div>
+        </div>
+
+        <!-- focus areas as small tiles -->
+        <div class="about-focus reveal">
+          <p class="focus-heading">What I focus on</p>
+          <ul class="focus-list">
+            <li>
+              <span class="focus-index">01</span>
+              <div>
+                <h3>Business Analysis</h3>
+                <p>Requirements gathering, stakeholder engagement and process mapping.</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-index">02</span>
+              <div>
+                <h3>Data Analytics</h3>
+                <p>Cleaning, structuring and visualising data to surface what matters.</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-index">03</span>
+              <div>
+                <h3>Information Systems</h3>
+                <p>Understanding how databases, networks and software fit together.</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-index">04</span>
+              <div>
+                <h3>Problem Solving</h3>
+                <p>Breaking down messy, real-world problems into manageable parts.</p>
+              </div>
+            </li>
+            <li>
+              <span class="focus-index">05</span>
+              <div>
+                <h3>Continuous Learning</h3>
+                <p>Always picking up new tools — currently deepening my Power BI and SQL skills.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section section-alt" id="education">
+    <div class="section-inner">
+      <p class="eyebrow">Fig. 03 — Academic Record</p>
+      <h2 class="section-title">Education</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2022 — 2025</p>
+            <h3>Bachelor of Science in Information Systems</h3>
+            <p class="timeline-org">University of Botswana &middot; Major: Computer Information Systems</p>
+            <p class="timeline-desc">
+              A four-year programme combining computing fundamentals with business and management
+              theory — covering everything from how systems are designed and built, to how
+              organisations use information to plan and operate.
+            </p>
+            <div class="timeline-modules">
+              <span>Systems Analysis &amp; Design</span>
+              <span>Database Management</span>
+              <span>Business Intelligence</span>
+              <span>Project Management</span>
+              <span>Software Development</span>
+              <span>Networking Fundamentals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">June 2024 — August 2024</p>
+            <h3>Industrial Attachment — Bank of Botswana</h3>
+            <p class="timeline-org">IT Support, Attachment Programme</p>
+            <p class="timeline-desc">
+              Three months on the ground with the Bank's IT support function — applying classroom
+              knowledge to real users, real equipment and real deadlines.
+            </p>
+            <div class="timeline-modules">
+              <span>Hardware Setup &amp; Maintenance</span>
+              <span>End-User Support</span>
+              <span>IT Documentation</span>
+              <span>Systems Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">2025 — Present</p>
+            <h3>Continuing Professional Development</h3>
+            <p class="timeline-org">Self-directed learning</p>
+            <p class="timeline-desc">
+              Since graduating, I've been building on the analytics side of my degree — working
+              through practical SQL and Power BI exercises and applying them to small personal
+              projects.
+            </p>
+            <div class="timeline-modules">
+              <span>SQL</span>
+              <span>Power BI</span>
+              <span>Data Visualisation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <p class="eyebrow">Fig. 04 — Capability Matrix</p>
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <h3>Business Analysis</h3>
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V13M10 19V9M16 19V5M22 19H2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-row"><span>Requirements Gathering</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Stakeholder Management</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Process Mapping</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Technical Documentation</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <h3>Data Analytics</h3>
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12L8 7L13 12L21 4M21 4H15M21 4V10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-row"><span>Microsoft Excel</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Power BI</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>SQL &amp; Database Management</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Data Visualisation</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <h3>Technical Skills</h3>
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 4L2 12L8 20M16 4L22 12L16 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-row"><span>HTML &amp; CSS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>JavaScript</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Database Design</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>VBA</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="65"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <h3>Professional Skills</h3>
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M4 21C4 16.5 7.5 14 12 14C16.5 14 20 16.5 20 21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <ul class="skill-list">
+            <li>
+              <div class="skill-row"><span>Communication</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="95"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Problem Solving</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Teamwork</span><span class="skill-pct">93%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="93"></div></div>
+            </li>
+            <li>
+              <div class="skill-row"><span>Adaptability</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow">Fig. 05 — Selected Work</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data">Data Analysis</button>
+        <button class="filter-btn" data-filter="business">Business Analysis</button>
+        <button class="filter-btn" data-filter="design">Graphic Design</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-category="data">
+          <div class="project-media" style="background: linear-gradient(135deg, #1B2C42, #3C5A78);">
+            <div class="project-tag">Data Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Sales Performance Dashboard</h3>
+            <p>An interactive dashboard tracking monthly sales by region and product line, built to help
+              a small business spot trends and slow-moving stock at a glance.</p>
+            <div class="project-tech">
+              <span>Power BI</span><span>Excel</span><span>SQL</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="data">
+          <div class="project-media" style="background: linear-gradient(135deg, #233246, #C8A45C 140%);">
+            <div class="project-tag">Data Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Customer Insights Dashboard</h3>
+            <p>Segmented customer data to highlight buying patterns and retention risk, with
+              visual summaries designed for a non-technical management team.</p>
+            <div class="project-tech">
+              <span>Power BI</span><span>Excel</span><span>Data Visualisation</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="data">
+          <div class="project-media" style="background: linear-gradient(135deg, #2A2E35, #1B2C42);">
+            <div class="project-tag">Data Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Market Analysis Report</h3>
+            <p>A structured report examining market trends within a chosen sector, combining
+              secondary research with data summaries and recommendations.</p>
+            <div class="project-tech">
+              <span>Excel</span><span>SQL</span><span>Reporting</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="business">
+          <div class="project-media" style="background: linear-gradient(135deg, #3C5A78, #1B2C42);">
+            <div class="project-tag">Business Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Inventory Management Solution</h3>
+            <p>Analysed an organisation's stock-control process and proposed a streamlined
+              system design to reduce manual tracking and stock discrepancies.</p>
+            <div class="project-tech">
+              <span>Process Mapping</span><span>Database Design</span><span>Excel</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="business">
+          <div class="project-media" style="background: linear-gradient(135deg, #C8A45C, #2A2E35 160%);">
+            <div class="project-tag">Business Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Requirements Documentation Project</h3>
+            <p>Gathered and documented functional requirements for a software project,
+              translating stakeholder interviews into clear specifications for a development team.</p>
+            <div class="project-tech">
+              <span>Requirements Gathering</span><span>Documentation</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="business">
+          <div class="project-media" style="background: linear-gradient(135deg, #1B2C42, #233246);">
+            <div class="project-tag">Business Analysis</div>
+          </div>
+          <div class="project-body">
+            <h3>Business Process Improvement Study</h3>
+            <p>Mapped an existing manual workflow end-to-end, identified bottlenecks, and
+              proposed a revised process to cut turnaround time.</p>
+            <div class="project-tech">
+              <span>Process Mapping</span><span>Stakeholder Management</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="design">
+          <div class="project-media" style="background: linear-gradient(135deg, #C8A45C, #3C5A78);">
+            <div class="project-tag">Graphic Design</div>
+          </div>
+          <div class="project-body">
+            <h3>Brand Identity Design</h3>
+            <p>Developed a small brand identity package — logo concepts, colour palette and
+              typography guidelines — for a fictional consulting startup.</p>
+            <div class="project-tech">
+              <span>Branding</span><span>Visual Design</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="design">
+          <div class="project-media" style="background: linear-gradient(135deg, #2A2E35, #C8A45C 180%);">
+            <div class="project-tag">Graphic Design</div>
+          </div>
+          <div class="project-body">
+            <h3>Marketing Campaign Assets</h3>
+            <p>Designed a set of social media and print assets for a campaign, keeping a
+              consistent visual language across formats.</p>
+            <div class="project-tech">
+              <span>Layout Design</span><span>Visual Consistency</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-media" style="background: linear-gradient(135deg, #1B2C42, #3C5A78 160%);">
+            <div class="project-tag">Web Development</div>
+          </div>
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>This site — designed and built from scratch with HTML, CSS and JavaScript to
+              present my work in a professional, business-oriented format.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-media" style="background: linear-gradient(135deg, #3C5A78, #C8A45C 170%);">
+            <div class="project-tag">Web Development</div>
+          </div>
+          <div class="project-body">
+            <h3>Business Landing Page</h3>
+            <p>A single-page marketing site for a small business, focused on a clear value
+              proposition, simple navigation and a contact form.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>Responsive Design</span>
+            </div>
+            <a href="#" class="project-link">View Project
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <p class="eyebrow">Fig. 06 — Get In Touch</p>
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-intro reveal">
+          <p class="contact-statement">
+            Let's discuss how technology and business can work together to create value.
+          </p>
+          <p class="contact-sub">
+            Whether it's a data project, a business analysis role, or just a conversation about
+            where IT meets strategy — I'd be glad to hear from you.
+          </p>
+
+          <div class="contact-cards">
+            <a href="mailto:oloratonthula@outlook.com" class="contact-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5H21V19H3V5Z" stroke="currentColor" stroke-width="1.7"/><path d="M3 6L12 13L21 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">oloratonthula@outlook.com</span>
+              </span>
+            </a>
+            <a href="tel:+26774479420" class="contact-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5C4 14 10 20 19 20L21 16L16 14L14 17C11 16 8 13 7 10L10 8L8 3L4 5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+267 74 479 420</span>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 10V17M7 7V7.5M12 17V10M12 10C12 10 14 9 15.5 10.5C17 12 17 17 17 17M12 10V17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Connect with me</span>
+              </span>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12C2 16.4 4.9 20.1 8.8 21.4C8.8 20.1 8.8 18.9 8.8 18C6.5 18.5 5.9 16.9 5.9 16.9C5.5 15.8 4.8 15.5 4.8 15.5C3.9 14.9 4.9 14.9 4.9 14.9C5.9 15 6.5 15.9 6.5 15.9C7.4 17.4 8.8 17 9.4 16.7C9.5 16 9.8 15.5 10.1 15.2C7.9 14.9 5.6 14 5.6 10.5C5.6 9.5 6 8.7 6.6 8C6.5 7.7 6.2 6.8 6.7 5.5C6.7 5.5 7.5 5.3 8.9 6.2C9.9 5.9 11 5.8 12 5.8C13 5.8 14.1 5.9 15.1 6.2C16.5 5.2 17.3 5.5 17.3 5.5C17.8 6.8 17.5 7.7 17.4 8C18 8.7 18.4 9.5 18.4 10.5C18.4 14 16.1 14.9 13.9 15.2C14.3 15.6 14.6 16.3 14.6 17.3C14.6 18.8 14.6 20.1 14.6 21.4C18.5 20.1 21.4 16.4 21.4 12C21.4 6.5 16.9 2 12 2Z" fill="currentColor"/></svg>
+              </span>
+              <span>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">View my code</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8H14M14 8L9 3M14 8L9 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Olorato Nthula. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
